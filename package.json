@@ -1,0 +1,18 @@
+{
+  "name": "ultimate-rock-paper-scissors",
+  "version": "0.0.1",
+  "description": "The Ultimate Rock Paper Scissors",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "GameDevRaj",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "socket.io": "^4.5.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.19"
+  }
+}

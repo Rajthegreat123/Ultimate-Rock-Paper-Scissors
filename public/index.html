@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <title>Ultimate Rock Paper Scissors</title>
+</head>
+
+<body>
+    <div class="start-screen">
+        <h1>Ultimate Rock Paper Scissors</h1>
+
+        <div class="gameplay-choices" id="gameplay-choices">
+            <button id="open-create-room-box">Create Room</button>
+            <button id="open-join-room-box">Join Room</button>
+        </div>
+
+        <div class="create-room-box" id="create-room-box">
+            <input type="text" id="room-id"><button id="create-room-btn">Create</button>
+
+            <button id="cancel-create-action" class="cancel-action">Cancel</button>
+        </div>
+
+        <div class="join-room-box" id="join-room-box">
+            <div class="join-with-id">
+                <input type="text" id="join-room-input"><button id="join-room-btn">Join</button>
+
+                <button id="cancel-join-action" class="cancel-action">Cancel</button>
+            </div>
+
+            <button class="join-random" id="join-random">Join Random</button>
+        </div>
+
+        <div class="error-message" id="error-message">
+        </div>
+        <h2><u>Important!</u></h2>
+        <p>In Ultimate Rock Paper Scissors there are 9 options: Rock, Gun, Water, Air, Paper, Sponge, Human, Scissors, Fire.</p>
+        <br>
+        <p>Rock beats Scissors, Human, Sponge and Fire.<br>Gun beats Rock, Fire, Scissors and Human.<br>Water beats Rock, Fire, Scissors and Gun.<br>Air beats Rock, Water, Gun and Fire.<br>Paper beats Rock, Gun, Water and Air.<br>Sponge beats Paper, Air, Water and Gun.<br>Human beats Sponge, Paper, Air, and Water.<br>Scissors beats Paper, Human, Sponge and Air.<br>Fire beats Scissors, Human, Sponge and Paper.</p>
+    </div>
+
+    <div class="gameplay-screen">
+        <div class="wait-message" id="wait-message">
+            <p>Waiting for another player to join...</p>
+        </div>
+
+        <div class="connected-players">
+            <div class="player">
+                <span class="dot" id="player-1"></span> <span id="player-1-tag"></span>
+            </div>
+
+            <div class="player">
+                <span class="dot" id="player-2"></span> <span id="player-2-tag"></span>
+            </div>
+        </div>
+
+        <div class="choices">
+            <div class="choice" id="rock">
+                <i class="fas fa-hand-rock"></i>
+            </div>
+
+            <div class="choice" id="gun">
+                <i class='fa-solid fa-gun'></i>
+            </div>
+
+            <div class="choice" id="water">
+                <i class="fa-solid fa-droplet"></i>
+            </div>
+
+            <div class="choice" id="air">
+                <i class="fas fa-wind"></i>
+            </div>
+
+            <div class="choice" id="paper">
+                <i class="fas fa-hand-paper"></i>
+            </div>
+
+            <div class="choice" id="sponge">
+                <i class="fa-solid fa-disease"></i>
+            </div>
+
+            <div class="choice" id="human">
+                <i class="fa-solid fa-person"></i>
+            </div>
+
+            <div class="choice" id="scissor">
+                <i class="fas fa-hand-scissors"></i>
+            </div>
+
+            <div class="choice" id="fire">
+                <i class="fa-solid fa-fire"></i>
+            </div>
+        </div>
+
+        <div class="score">
+            <span>You: <span id="my-score">0</span></span>
+            <span>Player 2: <span id="enemy-score">0</span></span>
+        </div>
+
+        <div class="message-after-choice-selection" id="win-message">
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/index.js "></script>
+</body>
+
+</html>
